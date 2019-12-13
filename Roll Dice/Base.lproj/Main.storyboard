@@ -1,24 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8ME-th-VM0">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Roll Dice-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Roll_Dice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEY-Oq-Se5">
+                                <rect key="frame" x="137" y="359" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="Pcq-cb-E06"/>
+                                    <constraint firstAttribute="width" constant="100" id="YHo-z8-4kS"/>
+                                    <constraint firstAttribute="height" constant="100" id="mJI-f2-EFY"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="icon"/>
+                                <connections>
+                                    <action selector="rolling:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uKL-Nw-lTV"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="1aJ-v2-MUO">
+                                <rect key="frame" x="68" y="146" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="HuF-U7-UgF"/>
+                                    <constraint firstAttribute="height" constant="128" id="dhD-aJ-xeE"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROLL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQY-U3-KbZ">
+                                <rect key="frame" x="166" y="477" width="44" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.098039215686274508" green="0.25098039215686274" blue="0.32156862745098036" alpha="0.46572666952054792" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DEY-Oq-Se5" secondAttribute="trailing" constant="138" id="2oY-sX-EeA"/>
+                            <constraint firstItem="1aJ-v2-MUO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="102" id="6DX-9x-lhb"/>
+                            <constraint firstItem="JQY-U3-KbZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="166" id="8Qx-Dy-xjf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JQY-U3-KbZ" secondAttribute="trailing" constant="165" id="9bb-rG-VDT"/>
+                            <constraint firstItem="DEY-Oq-Se5" firstAttribute="top" secondItem="1aJ-v2-MUO" secondAttribute="bottom" constant="85" id="Ds4-Pw-Z1l"/>
+                            <constraint firstItem="JQY-U3-KbZ" firstAttribute="top" secondItem="DEY-Oq-Se5" secondAttribute="bottom" constant="18" id="Ucn-pS-OHk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1aJ-v2-MUO" secondAttribute="trailing" constant="67" id="ZRe-d3-GoF"/>
+                            <constraint firstItem="DEY-Oq-Se5" firstAttribute="top" secondItem="1aJ-v2-MUO" secondAttribute="bottom" constant="85" id="abG-in-01m"/>
+                            <constraint firstItem="JQY-U3-KbZ" firstAttribute="top" secondItem="DEY-Oq-Se5" secondAttribute="bottom" constant="18" id="lYN-I5-MVP"/>
+                            <constraint firstItem="DEY-Oq-Se5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="137" id="sql-fX-2Fc"/>
+                            <constraint firstItem="1aJ-v2-MUO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="68" id="ufS-7x-deh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Roll Dice" id="hxq-Fe-YUd"/>
+                    <connections>
+                        <outlet property="animerolling" destination="DEY-Oq-Se5" id="mC4-sF-wzP"/>
+                        <outlet property="imageRoll" destination="1aJ-v2-MUO" id="GDC-3I-ZFL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="874.39999999999998" y="138.98050974512745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="efE-sr-2hs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8ME-th-VM0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TT9-bg-aeq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0QH-wN-f6m"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KDT-Re-OcF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-64.799999999999997" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon" width="2048" height="2048"/>
+    </resources>
 </document>
